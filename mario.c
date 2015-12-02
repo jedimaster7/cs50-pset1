@@ -1,3 +1,10 @@
+/*
+  Mario in C for CS50 problem set 1
+  made using only standard libraries for C
+  it can now run without using cs50.h
+  ©Andrew Tolan 2015
+*/
+
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
