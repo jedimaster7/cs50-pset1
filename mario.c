@@ -7,27 +7,27 @@ int main(void) {
   int pyramidHeight;
 
   /* ask for pyramidHeight from user, check if is in bounds */
-  printf("Welcome to Mario in C\n");
-  printf("We are going to make the pyramid Mario has to climb\n");
-  printf("How tall do you want the pyramid to be?\n");
-  printf("It can be any nonzero number that is less than 23\n");
-  printf("Please enter the number here: ");
+  printf("  Welcome to Mario in C\n");
+  printf("  We are going to make the pyramid Mario has to climb\n");
+  printf("  How tall do you want the pyramid to be?\n");
+  printf("  It can be any nonzero number that is less than 23\n");
+  printf("  Please enter the number here: ");
 
-/*
+  /* ask for user input */
   int userInput;
   scanf("%d", &userInput);
-  if (userInput < 23 && userInput > 0) {
+
+  /* check if input is within bounds, then assign to pyramidHeight */
+  if (userInput > 0 && userInput < 23) {
     pyramidHeight = userInput;
+  } else {
+    printf("That's not what I asked for.");
   }
-  else {
-    printf("I said a NONZERO number less than 23");
-  }
-*/
 
   /* loop that creates the pyramid */
-  for (int i = 0; i < 5; i++) {
+  for (int i = 0; i < pyramidHeight; i++) {
     /* print correct amount of spaces */
-    for (int j = 0; j < 5-i; j++) {
+    for (int j = 0; j < pyramidHeight-i; j++) {
       printf("%s", " ");
     }
     /* print hashes */
